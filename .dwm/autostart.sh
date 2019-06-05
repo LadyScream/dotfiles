@@ -1,0 +1,15 @@
+#!/bin/bash
+pkill -9 cbatticon
+pkill -9 pa-applet
+pkill -9 megasync
+~/.fehbg &
+slstatus &
+megasync &
+pa-applet &
+nm-applet &
+cbatticon &
+setxkbmap -option compose:ralt &
+unclutter --timeout 3 &
+compton &
+transmission-daemon &
+~/.flexget/bin/flexget daemon start -d &
