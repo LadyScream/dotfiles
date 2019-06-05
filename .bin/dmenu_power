@@ -1,0 +1,22 @@
+#!/bin/bash
+
+OPTION=$(echo -e "Suspend\nReboot\nShutdown\nHibernate" | dmenu \
+  -fn "Fira Mono:size=10" -nb "#000000" -nf "#ffffff" \
+  -sb "#DB7464" -sf "#ffffff" -dim "0.5" -b -i -p "Option:")
+
+case $OPTION in
+  Suspend)
+    sudo zzz
+    ;;
+  Reboot)
+    sudo reboot
+    ;;
+  Shutdown)
+    sudo shutdown
+    ;;
+  Hibernate)
+    sudo ZZZ
+    ;;
+  *)
+    ;;
+esac
