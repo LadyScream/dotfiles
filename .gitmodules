@@ -1,0 +1,3 @@
+[submodule ".simple-git-prompt"]
+	path = .simple-git-prompt
+	url = https://github.com/jzp74/simple-git-prompt.git
