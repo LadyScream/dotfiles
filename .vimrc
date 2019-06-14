@@ -13,6 +13,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'dylanaraps/wal.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 "Plugin settings
