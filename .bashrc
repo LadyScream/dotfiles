@@ -4,12 +4,17 @@ shopt -s autocd cdspell direxpand dirspell globstar histappend histverify \
       nocaseglob no_empty_cmd_completion
 
 # Variables
+export EDITOR=vim
 HISTCONTROL='erasedups:ignoreboth'
 HISTIGNORE=?:??
 HISTFILESIZE=9999
 HISTSIZE=9999
 PROMPT_COMMAND='history -a'
-export PATH="$PATH:$HOME/.bin/:$HOME/.npm-modules/bin/"
+export PATH="$PATH:$HOME/.bin/:$HOME/.npm-modules/bin/:$HOME/.local/bin/"
+export NNN_OPENER=mimeo
+export NNN_TMPFILE=~/.config/nnn/.lastd
+export NNN_OPS_PROG=1
+source $HOME/.express_variables
 
 # Functions
 n () {
