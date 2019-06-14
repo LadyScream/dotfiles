@@ -13,3 +13,5 @@ unclutter --timeout 3 &
 compton &
 transmission-daemon &
 ~/.flexget/bin/flexget daemon start -d &
+thunderbird &
+play-with-mpv &
