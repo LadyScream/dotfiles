@@ -30,6 +30,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='ls --color=auto'
 alias q='exit'
 alias tsm='transmission-remote'
+alias vifm='vifmrun'
 
 # Prompt
 SIMPLE_GIT_PROMPT_MAX_PWD_LEN=0
