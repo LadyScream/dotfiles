@@ -33,6 +33,7 @@ nnoremap K :tabp<CR>
 
 "Settings
 let mapleader=","
+set updatetime=300
 set textwidth=80
 set number
 set shortmess=atI "Disable start message
@@ -60,4 +61,6 @@ let &undodir = g:myruntime . '/undodir'
 set autochdir "Change to current file pwd
 set backup "Enable backups
 set undofile "Enable undo file
+set autoindent
+filetype plugin indent on
 colorscheme wal
