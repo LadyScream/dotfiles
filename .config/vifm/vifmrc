@@ -1,0 +1,71 @@
+" Autocommands
+:view
+
+" Settings
+set syscalls
+set trash
+
+" Marks
+mark h ~/
+
+" Mappings
+nnoremap w :view<cr>
+nnoremap q :q<cr>
+
+" Filetypes
+"" Pdf
+filextype *.pdf zathura %c %i &
+fileviewer *.pdf
+        \ vifmimg pdfpreview %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+"" Video
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
+         \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
+         \*.as[fx]
+        \ {View using mpv}
+        \ mpv %f &
+fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
+          \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
+          \*.as[fx]
+        \ vifmimg videopreview %px %py %pw %ph %c 
+        \ %pc 
+        \ vifmimg clear
+        " \ ffprobe -pretty %c 2>&1
+
+"" Web
+filextype *.html,*.htm
+        \ {Open with chromium}
+        \ chromium %f &
+
+"" Images
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+        \ {View in feh}
+        \ feh %d &,
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
+        \ vifmimg draw %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+fileviewer *.gif
+        \ vifmimg gifpreview %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+" Office files
+filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
+
+"" file types
+set classify=' :dir:/, :exe:, :reg:, :link:'
+" various file names
+set classify+=' ::../::, ::*.sh::, ::*.[hc]pp::, ::*.[hc]::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::'
+" archives
+set classify+=' ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.jar,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo::'
+" images
+set classify+=' ::*.bmp,,*.gif,,*.jpeg,,*.jpg,,*.ico,,*.png,,*.ppm,,*.svg,,*.svgz,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xcf,,*.xpm,,*.xspf,,*.xwd::'
+" audio
+set classify+=' ::*.aac,,*.anx,,*.asf,,*.au,,*.axa,,*.flac,,*.m2a,,*.m4a,,*.mid,,*.midi,,*.mp3,,*.mpc,,*.oga,,*.ogg,,*.ogx,,*.ra,,*.ram,,*.rm,,*.spx,,*.wav,,*.wma,,*.ac3::'
+" media
+set classify+=' ::*.avi,,*.ts,,*.axv,,*.divx,,*.m2v,,*.m4p,,*.m4v,,.mka,,*.mkv,,*.mov,,*.mp4,,*.flv,,*.mp4v,,*.mpeg,,*.mpg,,*.nuv,,*.ogv,,*.pbm,,*.pgm,,*.qt,,*.vob,,*.wmv,,*.xvid::'
+" office files
+set classify+=' ::*.doc,,*.docx::, ::*.xls,,*.xls[mx]::, ::*.pptx,,*.ppt::'
