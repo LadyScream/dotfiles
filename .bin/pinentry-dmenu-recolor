@@ -4,7 +4,7 @@ echo "bottom = true;" > $HOME/.gnupg/pinentry-dmenu.conf
 echo "font = \"Fira Sans:size=10\"" >> $HOME/.gnupg/pinentry-dmenu.conf
 echo "normal_fg = \"$color15\";" >> $HOME/.gnupg/pinentry-dmenu.conf
 echo "normal_bg = \"$color0\";" >> $HOME/.gnupg/pinentry-dmenu.conf
-echo "select_fg = \"$color15\";" >> $HOME/.gnupg/pinentry-dmenu.conf
+echo "select_fg = \"$color0\";" >> $HOME/.gnupg/pinentry-dmenu.conf
 echo "select_bg = \"$color2\";" >> $HOME/.gnupg/pinentry-dmenu.conf
 echo "prompt_fg = \"$color15\";" >> $HOME/.gnupg/pinentry-dmenu.conf
 echo "prompt_bg = \"$color2\";" >> $HOME/.gnupg/pinentry-dmenu.conf

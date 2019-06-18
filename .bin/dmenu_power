@@ -1,8 +1,9 @@
 #!/bin/bash
 
+source $HOME/.cache/wal/colors.sh
 OPTION=$(echo -e "Suspend\nReboot\nShutdown\nHibernate" | dmenu \
-  -fn "Fira Mono:size=10" -nb "#000000" -nf "#ffffff" \
-  -sb "#DB7464" -sf "#ffffff" -dim "0.5" -b -i -p "Option:")
+  -fn "Fira Mono:size=10" -nb "$color0" -nf "$color15" \
+  -sb "$color2" -sf "$color0" -dim "0.5" -b -i -p "Option:")
 
 case $OPTION in
   Suspend)
