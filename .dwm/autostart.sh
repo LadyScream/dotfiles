@@ -15,3 +15,4 @@ transmission-daemon &
 ~/.flexget/bin/flexget daemon start -d &
 thunderbird &
 play-with-mpv &
+betterlockscreen -u ~/.lockscreen.png &
