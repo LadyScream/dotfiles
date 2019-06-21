@@ -14,6 +14,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
 "Plugin settings
@@ -22,6 +23,8 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 25
 let g:netrw_list_hide = '^\.\.*'
+""csv.vim
+let b:csv_arrange_align = 'l*'
 
 "Mappings
 nnoremap <expr> j v:count ? 'j' : 'gj'
