@@ -28,7 +28,7 @@ n () {
 }
 
 # Alias
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ls='ls --color=auto'
 alias q='exit'
 alias tsm='transmission-remote'
