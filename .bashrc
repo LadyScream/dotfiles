@@ -37,5 +37,8 @@ alias vifm='vifmrun'
 # Prompt
 SIMPLE_GIT_PROMPT_MAX_PWD_LEN=0
 SIMPLE_GIT_PROMPT_PREFIX="[\[\e[31m\]\u\[\e[m\]@\[\e[34m\]\h\[\e[m\]] \[\e[34m\]\W"
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  SIMPLE_GIT_PROMPT_PREFIX="[\[\e[31m\]\u\[\e[m\]@\[\e[34m\]\h [SSH]\[\e[m\]] \[\e[34m\]\W"
+fi
 SIMPLE_GIT_PROMPT_SUFFIX=">"
 source ~/.simple-git-prompt/simplegitprompt.sh
