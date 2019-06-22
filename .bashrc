@@ -14,7 +14,7 @@ export PATH="$PATH:$HOME/.bin/:$HOME/.npm-modules/bin/:$HOME/.local/bin/"
 export NNN_OPENER=mimeo
 export NNN_TMPFILE=~/.config/nnn/.lastd
 export NNN_OPS_PROG=1
-if [ -f $HOME/.express_variables]; then
+if [ -f $HOME/.express_variables ]; then
   source $HOME/.express_variables
 fi
 
