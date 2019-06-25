@@ -1,0 +1,47 @@
+#!/bin/bash
+[ -f $HOME/.cache/wal/colors.sh ] && source $HOME/.cache/wal/colors.sh
+
+NOTES_DIR="$HOME/.notes"
+EDITOR="st -e vim"
+DMENU_W=341
+DMENU_H=37
+
+dm() {
+  if [ -f $HOME/.cache/wal/colors.sh ]
+  then
+    dmenu -p "Notes:" -fn "Fira Mono:size=11" -dim 0.5 -i -l $DMENU_H\
+      -w $DMENU_W -nb $color0 -nf $color15 -sb $color2 -sf $color0 $@
+  else
+    dmenu -p "Notes:" -fn "Fira Mono:size=11" -dim 0.5 -i $@
+  fi
+}
+
+getFile() {
+  LIST=$(ls -p $PWD)
+
+  if [[ "$PWD" != "$NOTES_DIR" ]]
+  then
+    echo -e "..\n$LIST" | dm
+  else
+    echo "$LIST" | dm
+  fi
+}
+
+cd $NOTES_DIR
+
+while true; do
+  FILE=$(getFile)
+  [ $? -eq 1 ] && exit
+  case ${FILE: -1} in
+    \/)
+      [ -d $FILE ] && cd "$FILE" || mkdir "$FILE"
+      ;;
+    \.)
+      ([ "$PWD" != "$NOTES_DIR" ] && [ -d "$FILE" ]) && cd "$FILE"
+      ;;
+    *)
+      $EDITOR "$FILE"
+      exit
+      ;;
+  esac
+done
