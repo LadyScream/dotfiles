@@ -67,3 +67,21 @@ set undofile "Enable undo file
 set autoindent
 filetype plugin indent on
 colorscheme wal
+
+"Functions
+"" Called on BufWritePre, creates parent directories if they don't exist
+function s:MkNonExDir(file, buf)
+  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+    let dir=fnamemodify(a:file, ':h')
+    if !isdirectory(dir)
+      call mkdir(dir, 'p')
+    endif
+  endif
+endfunction
+
+"Autogroups
+"" Calls s:MkNonExDir to create parent directories if they don't exist
+augroup BWCCreateDir
+  autocmd!
+  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
