@@ -15,6 +15,9 @@ Plug 'honza/vim-snippets'
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'chrisbra/csv.vim'
+Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 "Plugin settings
@@ -25,6 +28,12 @@ let g:netrw_winsize = 25
 let g:netrw_list_hide = '^\.\.*'
 ""csv.vim
 let b:csv_arrange_align = 'l*'
+""vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
 
 "Mappings
 nnoremap <expr> j v:count ? 'j' : 'gj'
@@ -41,6 +50,7 @@ set textwidth=80
 set number
 set shortmess=atI "Disable start message
 set shortmess+=A "Disable swap file messages
+set conceallevel=2
 syntax on
 ""Hidden characters
 set list
