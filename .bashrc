@@ -11,11 +11,12 @@ HISTFILESIZE=9999
 HISTSIZE=9999
 PROMPT_COMMAND='history -a'
 export PATH="$PATH:$HOME/.bin/:$HOME/.npm-modules/bin/:$HOME/.local/bin/"
+export GOPATH=$HOME/.go
 export NNN_OPENER=mimeo
 export NNN_TMPFILE=~/.config/nnn/.lastd
 export NNN_OPS_PROG=1
 export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
+#gpg-connect-agent updatestartuptty /bye >/dev/null
 if [ -f $HOME/.express_variables ]; then
   source $HOME/.express_variables
 fi
