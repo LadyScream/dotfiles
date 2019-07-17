@@ -9,11 +9,9 @@ endif
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'dylanaraps/wal.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
