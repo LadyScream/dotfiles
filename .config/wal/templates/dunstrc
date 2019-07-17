@@ -54,15 +54,15 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "{color0}"
-    foreground = "{color15}"
-    timeout = 2
-    #icon = /path/to/icon
-
-[urgency_normal]
     background = "{color8}"
     foreground = "{color0}"
     timeout = 4
+    #icon = /path/to/icon
+
+[urgency_normal]
+    background = "{color0}"
+    foreground = "{color15}"
+    timeout = 2
     #icon = /path/to/icon
 
 [urgency_critical]
