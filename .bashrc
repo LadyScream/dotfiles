@@ -38,6 +38,7 @@ alias q='exit'
 alias tsm='transmission-remote'
 alias vifm='vifmrun'
 alias vim='nvim'
+alias vimcfg='nvim $HOME/.config/nvim/init.vim'
 alias ts='trizen -S'
 alias tq='trizen -Ss'
 
