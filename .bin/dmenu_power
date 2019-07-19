@@ -2,21 +2,21 @@
 
 source $HOME/.cache/wal/colors.sh
 OPTION=$(echo -e "Suspend\nReboot\nShutdown\nHibernate" | dmenu \
-  -fn "Fira Mono:size=10" -nb "$color0" -nf "$color15" \
+  -fn "Hack Nerd Font:size=11" -nb "$color0" -nf "$color15" \
   -sb "$color2" -sf "$color0" -dim "0.5" -b -i -p "Option:")
 
 case $OPTION in
   Suspend)
-    sudo zzz
+    systemctl suspend
     ;;
   Reboot)
-    sudo reboot
+    reboot
     ;;
   Shutdown)
-    sudo poweroff
+    poweroff
     ;;
   Hibernate)
-    sudo ZZZ
+    echo 'nope'
     ;;
   *)
     ;;
