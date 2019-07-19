@@ -4,7 +4,7 @@ shopt -s autocd cdspell direxpand dirspell globstar histappend histverify \
       nocaseglob no_empty_cmd_completion
 
 # Variables
-export EDITOR=vim
+export EDITOR=nvim
 HISTCONTROL='erasedups:ignoreboth'
 HISTIGNORE=?:??
 HISTFILESIZE=9999
@@ -41,6 +41,7 @@ alias vim='nvim'
 alias vimcfg='nvim $HOME/.config/nvim/init.vim'
 alias ts='trizen -S'
 alias tq='trizen -Ss'
+alias t='todo.sh'
 
 # Prompt
 SIMPLE_GIT_PROMPT_MAX_PWD_LEN=0
