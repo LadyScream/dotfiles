@@ -23,6 +23,7 @@ set shortmess+=A
 set shortmess=atI
 set textwidth=80
 set updatetime=100
+set statusline+=%{coc#status()}
 syntax on
 ""Hidden characters
 set list
@@ -36,6 +37,12 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+""Directories
+set backup
+set backupdir=~/.local/share/nvim/backup
+set directory=~/.local/share/nvim/tmp
+set undofile
+set undodir=~/.local/share/nvim/undodir
 ""Netrw
 let g:netrw_banner = 0
 let g:netrw_browse_split = 4
