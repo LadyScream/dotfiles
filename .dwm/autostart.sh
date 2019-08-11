@@ -11,10 +11,10 @@ slstatus &
 megasync &
 pa-applet &
 nm-applet &
-cbatticon &
+cbatticon -c "systemctl hibernate" &
 setxkbmap -option compose:ralt &
 unclutter --timeout 3 &
 compton -b
-udiskie &
+udiskie --tray &
 dunst &
 betterlockscreen -u ~/.lockscreen.png &
