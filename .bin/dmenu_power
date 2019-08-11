@@ -16,7 +16,7 @@ case $OPTION in
     poweroff
     ;;
   Hibernate)
-    echo 'nope'
+    systemctl hibernate
     ;;
   *)
     ;;
