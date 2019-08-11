@@ -28,7 +28,8 @@ set shortmess+=A
 set shortmess=atI
 set textwidth=80
 set updatetime=100
-set statusline+=%{coc#status()}\ %p%%\ %l:%c
+set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+set statusline+=\ %{coc#status()}\ %p%%\ %l:%c
 syntax on
 
 ""Hidden characters
