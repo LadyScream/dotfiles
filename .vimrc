@@ -8,7 +8,7 @@ endif
 "Plugins
 call plug#begin()
 Plug 'dylanaraps/wal.vim'
-Plug 'chrisbra/csv.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "Mappings
@@ -28,7 +28,7 @@ set shortmess+=A
 set shortmess=atI
 set textwidth=80
 set updatetime=100
-set statusline+=%p%%\ %l:%c
+set statusline+=%{coc#status()}\ %p%%\ %l:%c
 syntax on
 
 ""Hidden characters
