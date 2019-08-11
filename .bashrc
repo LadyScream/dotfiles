@@ -10,11 +10,11 @@ HISTIGNORE=?:??
 HISTFILESIZE=9999
 HISTSIZE=9999
 PROMPT_COMMAND='history -a'
-export PATH="$PATH:$HOME/.bin/:$HOME/.npm-modules/bin/:$HOME/.local/bin/"
+export PATH="$PATH:$HOME/.bin/:$HOME/.npm-modules/bin/:$HOME/.local/bin/:$HOME/.go/bin"
 export GOPATH=$HOME/.go
 export NNN_OPENER=mimeo
 export NNN_TMPFILE=~/.config/nnn/.lastd
-export NNN_OPS_PROG=1
+export NNN_OPS_PROG=0
 export GPG_TTY=$(tty)
 #gpg-connect-agent updatestartuptty /bye >/dev/null
 if [ -f $HOME/.express_variables ]; then
@@ -32,6 +32,7 @@ n () {
 
 # Alias
 alias dof='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dfl='\df -Th -x tmpfs -x squashfs -x devtmpfs'
 alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
 alias q='exit'
