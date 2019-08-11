@@ -23,7 +23,7 @@ set shortmess+=A
 set shortmess=atI
 set textwidth=80
 set updatetime=100
-set statusline+=%{coc#status()}
+set statusline+=%{coc#status()}\ %p%%\ %l:%c
 syntax on
 ""Hidden characters
 set list
