@@ -42,7 +42,6 @@ alias vim='nvim'
 alias vimcfg='nvim $HOME/.config/nvim/init.vim'
 alias ts='trizen -S'
 alias tq='trizen -Ss'
-alias t='todo.sh'
 
 # Prompt
 SIMPLE_GIT_PROMPT_MAX_PWD_LEN=0
